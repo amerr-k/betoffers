@@ -26,10 +26,6 @@ public class InitialDataService implements ApplicationRunner {
 	public void run(ApplicationArguments args) throws Exception {
 		marketData.setMarkets(fileSystemDataLoader.loadMarkets());
 		setEvents(fileSystemDataLoader.loadEvents());
-//		var outcome = eventData.getEvents().get(0).getMarkets().get(0).getOutcomes().get(0);
-//		System.out.println(outcome.getId());
-//		System.out.println(outcome.getStatus());
-//		System.out.println(outcome.getOutcomeId());
 	}
 	 
 	private void setEvents(ArrayList<Event> eventList) {
